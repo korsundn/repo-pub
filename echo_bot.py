@@ -4,10 +4,11 @@ It echoes any incoming text messages.
 """
 
 import logging
+from os import environ
 
 from aiogram import Bot, Dispatcher, executor, types
 
-API_TOKEN = '5302540901:AAGt-IeG8Q9zV4xwkmxGPaQWc61pyBAD-fE'
+API_TOKEN = environ.get('BOT_TOKEN', '/opt/macroinfo/macroinfo.txt')
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
